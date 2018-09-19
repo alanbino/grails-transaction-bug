@@ -1,0 +1,5 @@
+rootProject.name = 'entity-test'
+File statusFolder = new File("../status")
+if (statusFolder.exists()) {
+    includeBuild "../status"
+}
