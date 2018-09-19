@@ -24,8 +24,8 @@ dataSource:
     pooled: true
     driverClassName: com.mysql.jdbc.Driver
     dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-    username: enterUsername
-    password: enterPassword
+    username: soteria
+    password: soteria
     url: jdbc:mysql://127.0.0.1:3306/entity_test?useUnicode=true
     properties :
         initialSize : 5

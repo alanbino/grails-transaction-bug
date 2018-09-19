@@ -1,8 +1,6 @@
 README
 ________
 
-NOTE: entity-test and status folders must be in the same folder
-
 1. create a local mysql database called 'entity_test'
 2. load the file in the zip into this database 'entity_test_db.sql' which will give you the schema 
 3. change the mysql username and password in entity-test's application.yml

@@ -3,7 +3,6 @@ package com.mycompany.mytest.status
 import grails.gorm.transactions.Transactional
 import groovy.sql.GroovyRowResult
 import groovy.sql.Sql
-import grails.util.Holders
 import org.grails.datastore.mapping.query.api.Criteria
 
 @Transactional
@@ -100,9 +99,9 @@ class StatusService {
         return StatusEnt.get(id)
     }
 
-    public static boolean isActive(String id){
+    public boolean isActive(String id){
         if(id) {
-            StatusService statusService = (StatusService)Holders.getGrailsApplication().getMainContext().getBean("statusService");
+            StatusService statusService = this// (StatusService)Holders.getGrailsApplication().getMainContext().getBean("statusService");
             StatusEnt status = statusService.getCurrentStatus(id)
             return "ACTIVE".equals(status.getStatusId())
         }else{

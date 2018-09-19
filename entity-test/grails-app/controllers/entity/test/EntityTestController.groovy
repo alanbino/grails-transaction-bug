@@ -5,6 +5,7 @@ import grails.converters.JSON
 class EntityTestController {
 
     def entityTestService
+    def otherService
 
     def setUp() {
 
@@ -16,7 +17,7 @@ class EntityTestController {
 
         String checklistId = (String)params.checklistId
         ChecklistEnt checklistEnt = entityTestService.findCheckList(checklistId)
-        JSON responseBody = ChecklistConverter.getChecklistJSON(checklistEnt)
+        JSON responseBody = otherService.getChecklistJSON(checklistEnt)
         render "SUCCESS! TRY AGAIN FOR FAILURE!"
     }
 }

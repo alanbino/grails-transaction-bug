@@ -26,7 +26,6 @@ repositories {
 }
 
 dependencies {
-    compile "com.mycompany.mytest.plugins.status:status:4.6.0"
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"
     compile "org.grails:grails-core"

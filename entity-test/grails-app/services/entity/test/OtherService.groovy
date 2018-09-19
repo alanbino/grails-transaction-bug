@@ -2,12 +2,16 @@ package entity.test
 
 import com.mycompany.mytest.status.StatusService
 import grails.converters.JSON
+import grails.gorm.transactions.Transactional
 
-class ChecklistConverter {
+@Transactional
+class OtherService {
 
-    public static JSON getChecklistJSON(ChecklistEnt checklistEnt) {
+    StatusService statusService
 
-        boolean statusActive = StatusService.isActive(checklistEnt.id)
+    JSON getChecklistJSON(ChecklistEnt checklistEnt) {
+
+        boolean statusActive = statusService.isActive(checklistEnt.id)
 
         return [
                 id : checklistEnt.id,
@@ -26,5 +30,4 @@ class ChecklistConverter {
                 }
         ] as JSON
     }
-
 }
